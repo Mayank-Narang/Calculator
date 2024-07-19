@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+html, body {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+#calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: grey;
+  width: 500px;
+  height: 650px;
+  border-radius: 15px;
+}
+
+#screen {
+  background-color: #c4c4c4;
+  min-height: 150px;
+  min-width: 450px;
+  max-height: 150px;
+  max-width: 450px;
+  margin: 20px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  text-wrap: wrap;
+  
+}
+
+#enteredByUser{
+  min-height: 70%;
+  font-weight: bold;
+  font-size: 50px;
+  margin: 15px;
+}
+#previousComputed{
+  min-height: 30%;
+  font-size: 30px;
+  margin: 15px;
+}
+
+.danger {
+  display: flex;
+  justify-content: space-between;
+}
+
+.functional {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button {
+  min-width: 100px;
+  min-height: 55px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 7px;
+  flex: 1;
+}
+
+button#ac {
+  background-color: red;
+  margin-top: 0;
+}
+
+button#del {
+  margin-top: 0;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 600px) {
+  #calculator {
+    width: 95%;
+    height: auto;
+  }
+  #screen {
+    min-width: 90%;
+    min-height: 200px;
+    max-width: 90%;
+    max-height: 200px;
+    text-wrap:wrap;
+  }
+  button {
+    min-width: 70px;
+    min-height: 45px;
+    font-size: 20px;
+    margin: 5px;
+  }
+  .functional {
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  .danger {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
